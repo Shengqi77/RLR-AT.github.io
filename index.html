@@ -234,6 +234,37 @@
             </div>
         </div>
 
+ 	<script>
+                        video0 = document.getElementById("compVideo0");
+                        video1 = document.getElementById("compVideo1");
+                        video0.addEventListener('loadedmetadata', function() {
+                            if (activeVidID == 0 && select){
+                                video0.play();
+                                // print video size
+                                console.log(video0.videoWidth, video0.videoHeight);
+                                video0.hidden = false;
+                                video1.hidden = true;
+                            }
+                        });
+                        video1.addEventListener('loadedmetadata', function() {
+                            if (activeVidID == 1 && select){
+                                video1.play();
+                                // print video size
+                                console.log(video1.videoWidth, video1.videoHeight);
+                                video0.hidden = true;
+                                video1.hidden = false;
+                            }
+                        });
+                    </script>
+
+	    <script>
+                    activeMethodPillDenoising = document.querySelector('.method-pill-denoising.active-pill');
+                    activeScenePillDenoising = document.querySelector('.scene-pill-denoising.active-pill');
+                    activeModePillDenoising = document.querySelector('.mode-pill-denoising.active-pill');
+                </script>
+
+
+
 	<br>
         <div class="row">
             <div class="col-md-8 col-md-offset-2">
