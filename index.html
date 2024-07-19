@@ -6,7 +6,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
 
-    <title>DiffIR2VR-Zero</title>
+    <title>Long-range Turbulence Mitigation</title>
 
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -83,36 +83,31 @@
             <div class="col-md-12 text-center">
                 <ul class="list-inline">
                     <li>
-                        <a href="https://jimmycv07.github.io/">
+                        <a href="https://shengqi77.github.io/">
                            Shengqi Xu
-                        </a><sup>1</sup>
+                        </a>
                     </li>
                     <li>
-                        <a href="https://linjohnss.github.io/">
-                            Chin-Yang Lin
-                        </a><sup>1</sup>
+                        <a href="https://owuchangyuo.github.io/">
+                            Yi Chang
+                        </a>
                     </li>
                     <li>
-                        <a href="https://lightchaserx.github.io/">
-                            Zhixiang Wang
-                        </a><sup>2</sup>
+                        <a>
+                            Shuning Cao
+                        </a>
                     </li>
                     <li>
-                        <a href="https://chiweihsiao.github.io/">
-                            Chi-Wei Hsiao
-                        </a><sup>3</sup>
+                        <a>
+                            Xueyao Xao
+                        </a>
                     </li>
                     <li>
-                        <a href="https://koi953215.github.io/">
-                            Ting-Hsuan Chen
-                        </a><sup>1</sup>
+                        <a>
+                            Luxin Yan
+                        </a>
                     </li>
-                    <li>
-                        <a href="https://yulunalexliu.github.io/">
-                            Yu-Lun Liu
-                        </a><sup>1</sup>
-                    </li>
-                    </br><sup>1</sup>National Yang Ming Chiao Tung University&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<sup>2</sup>University of Tokyo&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<sup>3</sup>MediaTek Inc.
+                    </br>School of Artificial Intelligence and Automation, Huazhong University of Science and Technology, China.
                 </ul>
             </div>
         </div>
@@ -122,21 +117,21 @@
                 <div class="col-md-4 col-md-offset-4 text-center">
                     <ul class="nav nav-pills nav-justified">
                         <li>
-                            <a href="http://arxiv.org/abs/2407.01519">
+                            <a href="https://arxiv.org/pdf/2407.08377">
                             <image src="img/diff_paper_image.jpg" height="60px">
                                 <h4><strong>Paper</strong></h4>
                             </a>
                         </li>
                         <li>
-                            <a href="https://github.com/jimmycv07/DiffIR2VR-Zero">
+                            <a href="https://github.com/shengqi77/RLR-AT">
                             <image src="img/github.png" height="60px">
                                 <h4><strong>Code</strong></h4>
                             </a>
                         </li>
                         <li>
-                            <a href="https://huggingface.co/spaces/Koi953215/DiffIR2VR">
+                            <a href="https://shengqi77.github.io/RLRat/">
                             <image src="img/logos_huggingface.png" height="60px">
-                                <h4><strong>Hugging Face demo</strong></h4>
+                                <h4><strong>Paper</strong></h4>
                             </a>
                         </li>
                     </ul>
@@ -149,60 +144,33 @@
                 <div id="results-carousel" class="carousel results-carousel">
                     
                     <div class="item">
-                        <div class="video-compare-container" id="CVAI-2840RAO10_CAU32Div" style="width: 100%;">
-                            <video class="video" id="CVAI-2840RAO10_CAU32" loop playsinline autoPlay muted src="videos/noise_75_003_teaser.mp4" onplay="resizeAndPlay(this)" width="100%"></video>
-                            <canvas height=0 class="videoMerge" id="CVAI-2840RAO10_CAU32Merge" style="width: 100%;"></canvas>
+                        <div class="video-compare-container" id="car_video2Div" style="width: 100%;">
+                            <video class="video" id="car_video" loop playsinline autoPlay muted src="videos/car_video.mp4" onplay="resizeAndPlay(this)" width="100%"></video>
+                            <canvas height=0 class="videoMerge" id="car_videoMerge" style="width: 100%;"></canvas>
                         </div>
                     </div>
 
-                    <div class="item item-CVAI-2828RAO2_CRA32">
-                        <div class="video-compare-container" id="CVAI-2828RAO2_CRA32Div" style="width: 100%;">
-                            <video class="video" id="CVAI-2828RAO2_CRA32" loop playsinline autoPlay muted src="videos/SRx4_horsejump-high_teaser.mp4" onplay="resizeAndPlay(this)" width="100%"></video>
-                            <canvas height=0 class="videoMerge" id="CVAI-2828RAO2_CRA32Merge" style="width: 100%;"></canvas>
-                        </div>
-                    </div>
-
-                    <div class="item">
-                        <div class="video-compare-container" id="CVAI-2847LAO1_CRA32Div" style="width: 100%;">
-                            <video class="video" id="CVAI-2847LAO1_CRA32" loop playsinline autoPlay muted src="videos/noise_75_028_teaser.mp4" onplay="resizeAndPlay(this)" width="100%"></video>
-                            <canvas height=0 class="videoMerge" id="CVAI-2847LAO1_CRA32Merge" style="width: 100%;"></canvas>
-                        </div>
-                    </div>
-
-                    <div class="item item-CVAI-2829RAO9_CRA37">
-                        <div class="video-compare-container" id="CVAI-2829RAO9_CRA37Div" style="width: 100%;">
-                            <video class="video" id="CVAI-2829RAO9_CRA37" loop playsinline autoPlay muted src="videos/SRx4_car-roundabout_teaser.mp4" onplay="resizeAndPlay(this)" width="100%"></video>
-                            <canvas height=0 class="videoMerge" id="CVAI-2829RAO9_CRA37Merge" style="width: 100%;"></canvas>
+                    <div class="item item-building_video">
+                        <div class="video-compare-container" id="building_videoDiv" style="width: 100%;">
+                            <video class="video" id="building_video" loop playsinline autoPlay muted src="videos/building_video.mp4" onplay="resizeAndPlay(this)" width="100%"></video>
+                            <canvas height=0 class="videoMerge" id="building_videoMerge" style="width: 100%;"></canvas>
                         </div>
                     </div>
 
                     <div class="item">
-                        <div class="video-compare-container" id="CVAI-2855LAO26_CRA31Div" style="width: 100%;">
-                            <video class="video" id="CVAI-2855LAO26_CRA31" loop playsinline autoPlay muted src="videos/noise_75_002_teaser.mp4" onplay="resizeAndPlay(this)" width="100%"></video>
-                            <canvas height=0 class="videoMerge" id="CVAI-2855LAO26_CRA31Merge" style="width: 100%;"></canvas>
+                        <div class="video-compare-container" id="text_building_videoDiv" style="width: 100%;">
+                            <video class="video" id="text_building_video" loop playsinline autoPlay muted src="videos/text_building_video.mp4" onplay="resizeAndPlay(this)" width="100%"></video>
+                            <canvas height=0 class="videoMerge" id="text_building_videoMerge" style="width: 100%;"></canvas>
                         </div>
                     </div>
 
-                    <div class="item item-CVAI-2829RAO14_CAU37">
-                        <div class="video-compare-container" id="CVAI-2829RAO14_CAU37Div" style="width: 100%;">
-                            <video class="video" id="CVAI-2829RAO14_CAU37" loop playsinline autoPlay muted src="videos/SRx4_car-shadow_teaser.mp4" onplay="resizeAndPlay(this)" width="100%"></video>
-                            <canvas height=0 class="videoMerge" id="CVAI-2829RAO14_CAU37Merge" style="width: 100%;"></canvas>
+                    <div class="item item-text_building1_video.">
+                        <div class="video-compare-container" id="text_building1_videoDiv" style="width: 100%;">
+                            <video class="video" id="text_building1_video" loop playsinline autoPlay muted src="videos/text_building1_video.mp4" onplay="resizeAndPlay(this)" width="100%"></video>
+                            <canvas height=0 class="videoMerge" id="text_building1_videoMerge" style="width: 100%;"></canvas>
                         </div>
                     </div>
 
-                    <div class="item">
-                        <div class="video-compare-container" id="CVAI-2858LAO51_CRA9Div" style="width: 100%;">
-                            <video class="video" id="CVAI-2858LAO51_CRA9" loop playsinline autoPlay muted src="videos/noise_75_004_teaser.mp4" onplay="resizeAndPlay(this)" width="100%"></video>
-                            <canvas height=0 class="videoMerge" id="CVAI-2858LAO51_CRA9Merge" style="width: 100%;"></canvas>
-                        </div>
-                    </div>
-
-                    <div class="item item-CVAI-2832RAO7_CAU29">
-                        <div class="video-compare-container" id="CVAI-2832RAO7_CAU29Div" style="width: 100%;">
-                            <video class="video" id="CVAI-2832RAO7_CAU29" loop playsinline autoPlay muted src="videos/SRx4_breakdance_teaser.mp4" onplay="resizeAndPlay(this)" width="100%"></video>
-                            <canvas height=0 class="videoMerge" id="CVAI-2832RAO7_CAU29Merge" style="width: 100%;"></canvas>
-                        </div>
-                    </div>
 
                 </div>
               </div>
@@ -211,17 +179,9 @@
 
         <div class="row">
             <div class="col-md-12 text-center">
-                <b>DiffIR2VR-Zero</b> is a zero-shot video restoration method using pre-trained diffusion models, effectively handling denoising and up to 8x super-resolution without retraining.
+                The proposed method <b>CDSP</b> could effectively handle long-range atmospheric turbulence with severe geometric distortions.
 			</div>
         </div><br>
-
-        <!-- <div class="row">
-            <div class="col-md-8 col-md-offset-2">
-                <video id="v0" width="100%" autoplay loop muted controls>
-                  <source src="img/teaser.mp4" type="video/mp4" />
-                </video>
-						</div>
-        </div> -->
 
 
         <div class="row">
@@ -230,7 +190,7 @@
                     Abstract
                 </h3>
                 <p class="text-justify">
-                    This paper introduces a method for zero-shot video restoration using pre-trained image restoration diffusion models. Traditional video restoration methods often need retraining for different settings and struggle with limited generalization across various degradation types and datasets. Our approach uses a hierarchical token merging strategy for keyframes and local frames, combined with a hybrid correspondence mechanism that blends optical flow and feature-based nearest neighbor matching (latent merging). We show that our method not only achieves top performance in zero-shot video restoration but also significantly surpasses trained models in generalization across diverse datasets and extreme degradations (8$\times$ super-resolution and high-standard deviation video denoising). We present evidence through quantitative metrics and visual comparisons on various challenging datasets. Additionally, our technique works with any 2D restoration diffusion model, offering a versatile and powerful tool for video enhancement tasks without extensive retraining. This research leads to more efficient and widely applicable video restoration technologies, supporting advancements in fields that require high-quality video output.
+			             Long-range imaging inevitably suffers from atmospheric turbulence with severe geometric distortions due to random refraction of light. The further the distance, the more severe the disturbance. Despite existing research has achieved great progress in tackling short-range turbulence, there is less attention paid to long-range turbulence with significant distortions. To address this dilemma and advance the field, we construct a large-scale real long-range atmospheric turbulence dataset (RLR-AT), including 1500 turbulence sequences spanning distances from 1 Km to 13 Km. The advantages of RLR-AT compared to existing ones: turbulence with longer-distances and higher-diversity, scenes with greater-variety and larger-scale. Moreover, most existing work adopts either registration-based or decomposition-based methods to address distortions through one-step mitigation. However, they fail to effectively handle long-range turbulence due to its significant pixel displacements. In this work, we propose a coarse-to-fine framework to handle severe distortions, which cooperates dynamic turbulence and static background priors (CDSP).  On the one hand, we discover the pixel motion statistical prior of turbulence, and propose a frequency-aware reference frame for better large-scale distortion registration, greatly reducing the burden of refinement. On the other hand, we take advantage of the static prior of background, and propose a subspace-based low-rank tensor refinement model to eliminate the misalignments inevitably left by registration  while well preserving details. The dynamic and static priors complement to each other, facilitating us to progressively mitigate long-range turbulence with severe distortions. Extensive experiments demonstrate that the proposed method outperforms SOTA methods on different datasets.
                 </p>
             </div>
         </div>
@@ -239,7 +199,7 @@
         <div class="row">
             <div class="col-md-8 col-md-offset-2">
                 <h3>
-                    Video super-resolution
+                    Benchmark Examples
                 </h3>
                 <image src="img/motivation.jpg" width=100% style="display: block; margin: auto;"></image>
                 <p class="text-justify">
