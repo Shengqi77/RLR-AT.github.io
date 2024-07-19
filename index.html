@@ -388,132 +388,9 @@ The proposed method <b>RLR-AT</b> contains atmospheric turbulence with diverse d
             </div>
         </div>
  -->
+ 
+        
 <!--         <br>
-
-        <div class="row">
-            <div class="col-md-8 col-md-offset-2">
-                <h3>
-                    Qualitative comparisons on video super-resolution
-                </h3><br>
-
-                <div class="text-center ">
-                    <ul class="nav nav-pills center-pills">
-                        <li class="method-pill active" data-value="lq"
-                            onclick="selectCompVideo(this, activeScenePill)"><a>Input</a></li>
-                        <li class="method-pill" data-value="vidtome"
-                            onclick="selectCompVideo(this, activeScenePill)"><a>VidToMe</a></li>
-                        <li class="method-pill" data-value="FMA-Net"
-                            onclick="selectCompVideo(this, activeScenePill)"><a>FMA-Net</a></li>
-                        <li class="method-pill" data-value="SDx4_perframe"
-                            onclick="selectCompVideo(this, activeScenePill)"><a>SD x4 upscaler</a></li>
-                        <li class="method-pill" data-value="DiffBIR_perframe"
-                            onclick="selectCompVideo(this, activeScenePill)"><a>DiffBIR</a></li>
-                    </ul>
-                </div>
-
-                <script>
-                    activeMethodPill = document.querySelector('.method-pill.active-pill');
-                    activeScenePill = document.querySelector('.scene-pill.active-pill');
-                    activeModePill = document.querySelector('.mode-pill.active-pill');
-                </script>
-                
-                <div class="text-center">
-                    <div class="video-compare-container" id="compareDiv" style="width: 100%;">
-                        <video class="video" id="compare" loop playsinline autoPlay muted src="videos/SRx4_blackswan_lq_vs_ours.mp4" onplay="resizeAndPlay(this)" width="100%"></video>
-                        <canvas height=0 class="videoMerge" id="compareMerge" style="width: 100%;"></canvas>
-                    </div>
-                    <!-- <div class="video-container">
-                        <video class="video" style="height: 280px; max-width: 100%;" m id="compVideo0" loop playsinline autoplay muted>
-                            <source src="videos/comparison/mipnerf360_bonsai_zipnerf_vs_ours_rgb.mp4" />
-                        </video>
-                        <video class="video" style="height: 280px; max-width: 100%;" id="compVideo1" loop playsinline autoplay muted hidden>
-                            <source src="videos/comparison/mipnerf360_bonsai_zipnerf_vs_ours_depth.mp4" />
-                        </video>
-                    </div> -->
-                    <div class="text-center" style="color: black;" id="mode-pills">
-                        <div class="btn-group btn-group-sm">
-                            <span class="btn btn-primary mode-pill active" data-value="SRx4"
-                                onclick="selectCompVideo(activeMethodPill, activeScenePill, null, this)">
-                                x4
-                            </span>
-                            <span class="btn btn-primary mode-pill" data-value="SRx8"
-                                onclick="selectCompVideo(activeMethodPill, activeScenePill, null, this)">
-                                x8
-                            </span>
-                        </div>
-                    </div>
-
-
-                    <br>
-                    <p class="text-justify" style="text-align: center;">
-                        Baseline method (left) vs DiffIR2VR-Zero (right). Try selecting different methods and scenes!
-                    </p>
-                    <!-- <script>
-                        video0 = document.getElementById("compVideo0");
-                        video1 = document.getElementById("compVideo1");
-                        video0.addEventListener('loadedmetadata', function() {
-                            if (activeVidID == 0 && select){
-                                video0.play();
-                                // print video size
-                                console.log(video0.videoWidth, video0.videoHeight);
-                                video0.hidden = false;
-                                video1.hidden = true;
-                            }
-                        });
-                        video1.addEventListener('loadedmetadata', function() {
-                            if (activeVidID == 1 && select){
-                                video1.play();
-                                // print video size
-                                console.log(video1.videoWidth, video1.videoHeight);
-                                video0.hidden = true;
-                                video1.hidden = false;
-                            }
-                        });
-                    </script> -->
-                    
-                    <div class="pill-row scene-pills" id="scene-pills">
-                        <span class="pill scene-pill active" data-value="blackswan" onclick="selectCompVideo(activeMethodPill, this, 3)">
-                            <img class="thumbnail-img" src="thumbnails/blackswan_thumbnail.jpg" alt="DTU/scan31" width="64">
-                        </span>
-                        <span class="pill scene-pill" data-value="goat" onclick="selectCompVideo(activeMethodPill, this, 3)">
-                            <img class="thumbnail-img" src="thumbnails/goat_thumbnail.jpg" alt="DTU/scan45" width="64">
-                        </span>
-                        <span class="pill scene-pill" data-value="kite-surf" onclick="selectCompVideo(activeMethodPill, this, 3)">
-                            <img class="thumbnail-img" src="thumbnails/kite-surf_thumbnail.jpg" alt="LLFF/fern" width="64">
-                        </span>
-                        <span class="pill scene-pill" data-value="car-shadow" onclick="selectCompVideo(activeMethodPill, this, 3)">
-                            <img class="thumbnail-img" src="thumbnails/car-shadow_thumbnail.jpg" alt="LLFF/horns" width="64">
-                        </span>
-                        <span class="pill scene-pill" data-value="parkour" onclick="selectCompVideo(activeMethodPill, this, 3)">
-                            <img class="thumbnail-img" src="thumbnails/parkour_thumbnail.jpg" alt="Re10K/sofa" width="64">
-                        </span>
-                        <span class="pill scene-pill" data-value="breakdance" onclick="selectCompVideo(activeMethodPill, this, 3)">
-                            <img class="thumbnail-img" src="thumbnails/breakdance_thumbnail.jpg" alt="Re10K/living room" width="64">
-                        </span>
-                        <span class="pill scene-pill" data-value="drift-chicane" onclick="selectCompVideo(activeMethodPill, this, 6)">
-                            <img class="thumbnail-img" src="thumbnails/drift-chicane_thumbnail.jpg" alt="CO3D/bench" width="64">
-                        </span>
-                        <span class="pill scene-pill" data-value="bmx-trees" onclick="selectCompVideo(activeMethodPill, this, 6)">
-                            <img class="thumbnail-img" src="thumbnails/bmx-trees_thumbnail.jpg" alt="CO3D/plant" width="64">
-                        </span>
-                    </div>
-
-                    <script>
-                        activeMethodPill = document.querySelector('.method-pill.active-pill');
-                        activeScenePill = document.querySelector('.scene-pill.active-pill');
-                        activeModePill = document.querySelector('.mode-pill.active-pill');
-                    </script>
-                </div>
-            </div>
-        </div>
-        <br>
-
-
-
- -->
-        
-        
-        <br>
 
         <div class="row">
             <div class="col-md-8 col-md-offset-2">
@@ -528,7 +405,7 @@ The proposed method <b>RLR-AT</b> contains atmospheric turbulence with diverse d
 
         </div>
 <br>
-
+ -->
 
 <section class="hero is-light is-small">
     <h3>
