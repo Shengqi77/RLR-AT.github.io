@@ -196,21 +196,6 @@
         </div>
 
 
-        <br>
-        <div class="row">
-            <div class="col-md-8 col-md-offset-2">
-                <h3>
-                    Ours proposed zero-shot video restoration
-                </h3>
-                <image src="img/pipeline.jpg" width=100% style="display: block; margin: auto;"></image>
-                <p class="text-justify">
-                    We process low-quality (LQ) videos in batches using a diffusion model, with a keyframe randomly sampled within each batch. (a) At the beginning of the diffusion denoising process, hierarchical latent warping provides rough shape guidance both globally, through latent warping between keyframes, and locally, by propagating these latents within the batch. (b) Throughout most of the denoising process, tokens are merged before the self-attention layer. For the downsample blocks, optical flow is used to find the correspondence between tokens, and for the upsample blocks, cosine similarity is utilized. This hybrid flow-guided, spatial-aware token merging accurately identifies correspondences between tokens by leveraging both flow and spatial information, thereby enhancing overall consistency at the token level.
-                </p>
-            </div>
-        </div>
-
-
-
 
         <br>
 
