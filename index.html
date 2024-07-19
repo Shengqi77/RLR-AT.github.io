@@ -547,28 +547,6 @@
                     <p class="text-justify" style="text-align: center;">
                         Baseline method (left) vs DiffIR2VR-Zero (right). Try selecting different methods and scenes!
                     </p>
-                    <!-- <script>
-                        video0 = document.getElementById("compVideo0");
-                        video1 = document.getElementById("compVideo1");
-                        video0.addEventListener('loadedmetadata', function() {
-                            if (activeVidID == 0 && select){
-                                video0.play();
-                                // print video size
-                                console.log(video0.videoWidth, video0.videoHeight);
-                                video0.hidden = false;
-                                video1.hidden = true;
-                            }
-                        });
-                        video1.addEventListener('loadedmetadata', function() {
-                            if (activeVidID == 1 && select){
-                                video1.play();
-                                // print video size
-                                console.log(video1.videoWidth, video1.videoHeight);
-                                video0.hidden = true;
-                                video1.hidden = false;
-                            }
-                        });
-                    </script> -->
                     
                     <div class="pill-row scene-pills" id="scene-pills">
                         <span class="pill scene-pill active" data-value="blackswan" onclick="selectCompVideo(activeMethodPill, this, 3)">
@@ -612,21 +590,6 @@
 
         
         
-        <br>
-
-        <div class="row">
-            <div class="col-md-8 col-md-offset-2">
-    
-                <div class="text-center">
-                    <div class="video-compare-container" id="materialsDiv">
-                        <video class="video" id="sparsity" loop playsinline autoPlay muted src="videos/sparsity/stacked_vid.mp4" onplay="resizeAndPlay(this)"></video>
-                        <canvas height=0 class="videoMerge" id="sparsityMerge"></canvas>
-                    </div>
-			
-                </div>
-
-        </div>
-<br>
 
 
 <section class="hero is-light is-small">
