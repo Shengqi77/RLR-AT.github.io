@@ -178,8 +178,7 @@
 
         <div class="row">
             <div class="col-md-12 text-center">
-                <b>DiffIR2VR-Zero</b> is a zero-shot video restoration method using pre-trained diffusion models, effectively handling denoising and up to 8x super-resolution without retraining.
-			</div>
+The proposed dataset <b>CDSP</b> could effectively handle long-range atmospheric turbulence with severe geometric distortions.			</div>
         </div><br>
 
 
@@ -190,12 +189,12 @@
                     Abstract
                 </h3>
                 <p class="text-justify">
-                    This paper introduces a method for zero-shot video restoration using pre-trained image restoration diffusion models. Traditional video restoration methods often need retraining for different settings and struggle with limited generalization across various degradation types and datasets. Our approach uses a hierarchical token merging strategy for keyframes and local frames, combined with a hybrid correspondence mechanism that blends optical flow and feature-based nearest neighbor matching (latent merging). We show that our method not only achieves top performance in zero-shot video restoration but also significantly surpasses trained models in generalization across diverse datasets and extreme degradations (8$\times$ super-resolution and high-standard deviation video denoising). We present evidence through quantitative metrics and visual comparisons on various challenging datasets. Additionally, our technique works with any 2D restoration diffusion model, offering a versatile and powerful tool for video enhancement tasks without extensive retraining. This research leads to more efficient and widely applicable video restoration technologies, supporting advancements in fields that require high-quality video output.
+             Long-range imaging inevitably suffers from atmospheric turbulence with severe geometric distortions due to random refraction of light. The further the distance, the more severe the disturbance. Despite existing research has achieved great progress in tackling short-range turbulence, there is less attention paid to long-range turbulence with significant distortions. To address this dilemma and advance the field, we construct a large-scale real long-range atmospheric turbulence dataset (RLR-AT), including 1500 turbulence sequences spanning distances from 1 Km to 13 Km. The advantages of RLR-AT compared to existing ones: turbulence with longer-distances and higher-diversity, scenes with greater-variety and larger-scale. Moreover, most existing work adopts either registration-based or decomposition-based methods to address distortions through one-step mitigation. However, they fail to effectively handle long-range turbulence due to its significant pixel displacements. In this work, we propose a coarse-to-fine framework to handle severe distortions, which cooperates dynamic turbulence and static background priors (CDSP).  On the one hand, we discover the pixel motion statistical prior of turbulence, and propose a frequency-aware reference frame for better large-scale distortion registration, greatly reducing the burden of refinement. On the other hand, we take advantage of the static prior of background, and propose a subspace-based low-rank tensor refinement model to eliminate the misalignments inevitably left by registration  while well preserving details. The dynamic and static priors complement to each other, facilitating us to progressively mitigate long-range turbulence with severe distortions. Extensive experiments demonstrate that the proposed method outperforms SOTA methods on different datasets.
                 </p>
             </div>
         </div>
 
-
+<!-- 
 
         <br>
 
@@ -209,12 +208,12 @@
                     <source src="img/warping.mp4" type="video/mp4" />
                     </video>
                 </div> -->
-                <image src="img/warping.jpg" width=75% style="display: block; margin: auto;"></image>
+                <image src="data/demo.gif" width=75% style="display: block; margin: auto;"></image>
                 <p class="text-justify">
                     Without requiring any training, Hierarchical latent warping provides global and local shape guidance and can achieve coherence across frames by enforcing temporal stability in latent space.  
                 </p>
             </div>
-        </div>
+        </div> -->
 
         <br>
 
